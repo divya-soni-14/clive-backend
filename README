@@ -1,7 +1,5 @@
 # Clive Backend
 
-# YouTube Summarizer Backend
-
 This repository contains the backend for a YouTube summarization application. It processes YouTube video transcripts, generates AI-powered summaries using the Gemini API, and manages user conversations. The server is built with Node.js and Express, providing RESTful and streaming endpoints for a React frontend.
 
 ## Features
