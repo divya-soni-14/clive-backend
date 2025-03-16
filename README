@@ -6,15 +6,15 @@ This repository contains the backend for a YouTube summarization application. It
 - **YouTube Transcript Fetching**: Extracts transcripts from YouTube videos using `youtube-transcript`.
 - **AI Summarization**: Summarizes transcripts with Google’s Gemini API, with an option to avoid spoilers.
 - **Conversation Management**: Stores and retrieves conversation history per session, saved as JSON files.
-- **Streaming Responses**: Supports real-time AI response streaming (hypothetical Gemini streaming endpoint).
+- **Streaming Responses**: Supports real-time AI response streaming (if supported by the Gemini API).
 - **REST API**: Handles video summarization and conversation updates via POST requests.
 
 ## Tech Stack
-- **Node.js**: Runtime environment.
+- **Node.js**: JavaScript runtime environment.
 - **Express**: Web framework for routing and middleware.
 - **Gemini API**: AI model for generating summaries and responses (assumes `@google/generative-ai` or similar).
 - **File System**: Stores conversation data in JSON files.
-- **Dependencies**: `youtube-transcript`, `uuid`, `cors`, etc.
+- **Dependencies**: `youtube-transcript`, `uuid`, `cors`, `dotenv`, etc.
 
 ## Prerequisites
 - **Node.js** (v16 or higher recommended)
@@ -34,7 +34,7 @@ cd youtube-summarizer-backend
 npm install
 ```
 **Key dependencies:**
-- `express`: Web server
+- `express`: Web server framework
 - `youtube-transcript`: Fetches YouTube transcripts
 - `@google/generative-ai`: Gemini API client (or equivalent)
 - `uuid`: Generates unique session IDs
@@ -54,8 +54,5 @@ PORT=3000
 ```bash
 npm start
 ```
-The server will run on [http://localhost:3000](http://localhost:3000) (or your specified port).
-
----
-Customize this README further based on your project details and deployment setup!
+The server will start at [http://localhost:3000](http://localhost:3000) (or the specified port).
 
